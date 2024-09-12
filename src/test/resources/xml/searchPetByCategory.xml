@@ -2,7 +2,7 @@
 <suite name="Serenity Test Suite">
     <test name="API Test">
         <classes>
-            <class name="base.ApiTestWithTestNG"/>
+            <class name="base.steps.PetEndpoint"/>
         </classes>
     </test>
 </suite>

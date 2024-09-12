@@ -33,10 +33,18 @@ dependencies {
     //Rest Assured
     implementation ("io.rest-assured:rest-assured:5.3.0")
 
+    implementation ("org.json:json:20240303")
+
     //TestNG
     testImplementation ("org.testng:testng:7.10.0")
     testImplementation("io.cucumber:cucumber-testng:7.15.0")
     testImplementation ("io.cucumber:cucumber-java:6.10.4")
+
+    compileOnly ("org.projectlombok:lombok:1.18.30")
+    annotationProcessor ("org.projectlombok:lombok:1.18.30")
+
+    implementation ("com.fasterxml.jackson.core:jackson-core:2.17.1")
+    implementation ("com.fasterxml.jackson.core:jackson-databind:2.17.1")
 }
 
 tasks.test {
