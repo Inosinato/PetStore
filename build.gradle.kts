@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation(platform("org.junit:junit-bom:5.9.3"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 
     // Serenity BDD
@@ -24,7 +24,7 @@ dependencies {
     implementation("net.serenity-bdd:serenity-rest-assured:4.2.0")
 
     //Cucumber
-    implementation("net.serenity-bdd:serenity-cucumber:4.1.10")
+//    implementation("net.serenity-bdd:serenity-cucumber:4.1.10")
     implementation ("net.serenity-bdd:serenity-cucumber6:2.4.34")
 
     //Selenium Java
@@ -37,6 +37,13 @@ dependencies {
     testImplementation ("org.testng:testng:7.10.0")
     testImplementation("io.cucumber:cucumber-testng:7.15.0")
     testImplementation ("io.cucumber:cucumber-java:6.10.4")
+
+    compileOnly ("org.projectlombok:lombok:1.18.30")
+    annotationProcessor ("org.projectlombok:lombok:1.18.30")
+
+    implementation ("com.fasterxml.jackson.core:jackson-core:2.17.1")
+    implementation ("com.fasterxml.jackson.core:jackson-databind:2.17.1")
+
 }
 
 tasks.test {
