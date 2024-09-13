@@ -1,6 +1,6 @@
-package base.steps;
+package base.steps.User;
 
-import dto.responses.CreateSingleUserBodyRequest;
+import dto.responses.UserBodyRequest;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -8,17 +8,17 @@ import io.restassured.http.ContentType;
 import net.serenitybdd.rest.SerenityRest;
 
 import static base.ApiBaseClass.baseUri;
+import static base.ApiBaseClass.endpoint;
 
 public class CreateSingleUserEndpoint {
 
-    String controller;
     String username, firstname, lastname, email, password, phone;
     int id, status;
 
 
     @Given("I want to create a single new user")
     public void iWantToCreateASingleNewUser() {
-        controller = "/user";
+        endpoint = "/user";
     }
 
     @And("with id as {int}")
@@ -76,7 +76,7 @@ public class CreateSingleUserEndpoint {
         SerenityRest
                 .given()
                 .contentType(ContentType.JSON)
-                .body(CreateSingleUserBodyRequest.builder()
+                .body(UserBodyRequest.builder()
                         .id(this.id)
                         .username(this.username)
                         .firstName(this.firstname)
@@ -86,8 +86,9 @@ public class CreateSingleUserEndpoint {
                         .phone(this.phone)
                         .userStatus(this.status)
                         .build())
-                .baseUri(baseUri + controller)
+                .baseUri(baseUri + endpoint)
                 .when()
                 .post();
     }
+
 }

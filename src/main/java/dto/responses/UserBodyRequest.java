@@ -8,7 +8,7 @@ import lombok.Data;
 @Builder
 @Data
 @AllArgsConstructor
-public class CreateSingleUserBodyRequest {
+public class UserBodyRequest {
 
     @JsonProperty
     private int id;

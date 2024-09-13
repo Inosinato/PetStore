@@ -1,4 +1,4 @@
-package base.steps;
+package base.steps.Pet;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;

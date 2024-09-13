@@ -1,4 +1,4 @@
-Feature: Verify Pet controller
+Feature: Verify find pet by status endpoint
 
   Scenario: Verify get pet by status with valid status
     Given I make a GET request to "/pet/findByStatus"

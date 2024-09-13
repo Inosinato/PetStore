@@ -45,6 +45,8 @@ dependencies {
 
     implementation ("com.fasterxml.jackson.core:jackson-core:2.17.1")
     implementation ("com.fasterxml.jackson.core:jackson-databind:2.17.1")
+
+    implementation ("com.google.code.gson:gson:2.10.1")
 }
 
 tasks.test {
