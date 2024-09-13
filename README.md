@@ -1,7 +1,7 @@
 https://petstore3.swagger.io/#/
 
 Solution implemented:
-The solution was implemented using a combination of Java, Cucumber, Serenity and testNG, also used libraries like Lombok and Jackson to have more flexibility using a builder pattern for the body of requests.
+The solution was implemented using a combination of Java, Cucumber, Serenity and testNG, also used libraries like Lombok and Jackson to have more flexibility using a builder pattern for the body of requests. The idea is to set up common actions so they can be reused in the multiple test that can derive from the endpoints, also to share as much as posible the variables to be reused. While it was not implemented the attempt was to create a method that allow to validate specific responses in body of the endpoints, such as id, names,etc.
 
 Test cases list
 User
